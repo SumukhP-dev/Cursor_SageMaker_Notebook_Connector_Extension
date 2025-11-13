@@ -8,6 +8,11 @@
     "type": "git",
     "url": "https://github.com/SumukhP-dev/Sagemaker_Remote_Connection_Extension.git"
   },
+  "homepage": "https://github.com/SumukhP-dev/Sagemaker_Remote_Connection_Extension#readme",
+  "bugs": {
+    "url": "https://github.com/SumukhP-dev/Sagemaker_Remote_Connection_Extension/issues"
+  },
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.80.0"
   },
