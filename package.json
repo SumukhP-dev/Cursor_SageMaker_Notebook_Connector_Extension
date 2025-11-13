@@ -1,23 +1,40 @@
 {
   "name": "sagemaker-remote-connection",
   "displayName": "SageMaker Remote Connection",
-  "description": "Connect Cursor to AWS SageMaker Studio JupyterLab instances via Remote-SSH",
+  "description": "Connect Cursor/VS Code to AWS SageMaker Studio JupyterLab notebooks via Remote-SSH. One-click connection to SageMaker instances with automatic setup.",
   "version": "1.0.0",
   "publisher": "dream-flow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SumukhP-dev/Sagemaker_Remote_Connection_Extension.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
     "Other",
-    "Remote"
+    "Remote",
+    "Machine Learning"
   ],
   "keywords": [
     "aws",
     "sagemaker",
+    "sagemaker studio",
     "jupyter",
+    "jupyterlab",
     "notebook",
+    "notebooks",
     "remote",
-    "ssh"
+    "ssh",
+    "remote-ssh",
+    "cursor",
+    "vscode",
+    "machine learning",
+    "ml",
+    "data science",
+    "python",
+    "connect",
+    "connection"
   ],
   "activationEvents": [
     "onCommand:sagemaker-remote.connect"
@@ -38,6 +55,46 @@
       {
         "command": "sagemaker-remote.setup",
         "title": "Setup SageMaker Connection",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.debugSSHConfig",
+        "title": "Debug SSH Config",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.startServer",
+        "title": "Start Local Server",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.diagnose",
+        "title": "Diagnose Connection",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.fixArnConversion",
+        "title": "Fix ARN Conversion",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.fixCodeWrapper",
+        "title": "Fix Code Wrapper",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.fixSshConfig",
+        "title": "Fix SSH Config",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.applyAllFixes",
+        "title": "Apply All Fixes",
+        "category": "SageMaker"
+      },
+      {
+        "command": "sagemaker-remote.quickStart",
+        "title": "Quick Start: Connect to SageMaker",
         "category": "SageMaker"
       }
     ],
@@ -73,8 +130,5 @@
     "@types/vscode": "^1.80.0",
     "@vscode/vsce": "^2.32.0",
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "child_process": "^1.0.2"
   }
 }
