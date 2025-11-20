@@ -1,5 +1,5 @@
 /**
- * Shared types and interfaces for the SageMaker Remote Connection extension
+ * Shared types and interfaces for the Cursor SageMaker Notebook Connector extension
  */
 
 export interface PrerequisitesResult {

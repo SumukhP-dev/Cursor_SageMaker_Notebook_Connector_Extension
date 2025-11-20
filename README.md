@@ -1,19 +1,21 @@
-# SageMaker Remote Connection Extension
+# Cursor SageMaker Notebook Connector
 
-**Connect Cursor/VS Code to AWS SageMaker Studio JupyterLab notebooks via Remote-SSH**
+**Connect Cursor to AWS SageMaker Studio JupyterLab notebooks via Remote-SSH**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/SumukhP-dev/Sagemaker_Remote_Connection_Extension)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/SumukhP-dev/Sagemaker_Remote_Connection_Extension)
 [![VS Code](https://img.shields.io/badge/VS%20Code-1.80.0+-blue)](https://code.visualstudio.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/SumukhP-dev/Sagemaker_Remote_Connection_Extension/blob/main/LICENSE)
 
-> **Looking to connect Cursor to SageMaker?** This extension makes it easy! Connect to your SageMaker Studio JupyterLab instances with one click.
+> **Note:** This extension was formerly known as "SageMaker Remote Connection". If you're using the old extension (`SumukhP-dev.sagemaker-remote-connection`), please uninstall it and install this one instead for the latest features and support.
+
+> **Connect Cursor to SageMaker Notebooks!** This extension makes it easy! Connect Cursor to your SageMaker Studio JupyterLab notebook instances with one click. Perfect for data scientists and ML engineers using Cursor with SageMaker.
 
 ## 🔍 Who is this for?
 
-- **Data Scientists** working with SageMaker Studio notebooks
-- **ML Engineers** who want to use Cursor/VS Code with SageMaker
-- **Developers** looking to connect to remote SageMaker environments
-- **Anyone** asking: _"How do I connect Cursor to SageMaker?"_ or _"Can I use VS Code with SageMaker Studio?"_
+- **Data Scientists** working with SageMaker Studio notebooks who want to use Cursor
+- **ML Engineers** using Cursor for development with SageMaker notebook environments
+- **Developers** looking to connect Cursor to remote SageMaker notebook instances
+- **Anyone** asking: _"How do I connect Cursor to SageMaker notebooks?"_ or _"Can I use Cursor with SageMaker Studio?"_
 
 ## Features
 

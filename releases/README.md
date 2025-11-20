@@ -1,6 +1,6 @@
 # Releases
 
-This folder contains all published VSIX files for the SageMaker Remote Connection extension.
+This folder contains all published VSIX files for the Cursor SageMaker Notebook Connector extension.
 
 ## Files
 
@@ -13,7 +13,7 @@ When you run `npm run package`, the VSIX file will be created in this folder.
 
 To publish to OpenVSX (Cursor marketplace):
 ```bash
-ovsx publish releases/sagemaker-remote-connection-<version>.vsix
+ovsx publish releases/cursor-sagemaker-notebook-connector-<version>.vsix
 ```
 
 To publish to VS Code Marketplace:

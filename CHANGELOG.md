@@ -1,9 +1,47 @@
 # Change Log
 
-All notable changes to the SageMaker Remote Connection extension will be documented in this file.
+All notable changes to the Cursor SageMaker Notebook Connector extension will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.2.1] - 2024-12-XX
+
+### Added
+- Migration check that detects if the old "SageMaker Remote Connection" extension is installed and prompts users to uninstall it
+- Migration notice in README directing users from the old extension
+
+## [1.2.0] - 2024-12-XX
+
+### Changed
+- **Renamed extension** from "SageMaker Remote Connection" to "Cursor SageMaker Notebook Connector" to better reflect its purpose
+- Updated package name to `cursor-sagemaker-notebook-connector`
+- Enhanced description to emphasize Cursor and SageMaker notebook connectivity
+- Updated all documentation and references to reflect the new name
+
+## [1.1.0] - 2024-12-XX
+
+### Added
+- Enhanced SSH config debugging with automatic detection of common issues:
+  - VS Code vs Cursor path mismatches (critical issue detection)
+  - `%n` vs `%h` ProxyCommand parameter issues
+  - Missing environment variables in ProxyCommand
+  - `sm_*` wildcard host configuration issues
+
+### Improved
+- Streamlined Quick Start process:
+  - Removed excessive waiting steps for better user experience
+  - More efficient server readiness checks
+  - Clearer next steps guidance after setup
+- Enhanced error detection in SSH config debugging:
+  - Automatic detection of wrong editor paths (Code vs Cursor)
+  - Detection of incorrect ProxyCommand parameters
+  - Better validation of PowerShell script paths
+
+### Fixed
+- Fixed TypeScript compilation errors in QuickStartService (PowerShell string escaping)
+- Fixed SSH config fix function to handle VS Code to Cursor path conversions
+- Improved error messages and diagnostics output
 
 ## [1.0.1] - 2024-12-XX
 
@@ -13,7 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-12-XX
 
 ### Added
-- Initial release of SageMaker Remote Connection extension
+- Initial release of Cursor SageMaker Notebook Connector extension (formerly SageMaker Remote Connection)
 - One-click connection to SageMaker Studio JupyterLab notebooks via Remote-SSH
 - Automatic prerequisites checking (AWS CLI, Remote-SSH, AWS Toolkit)
 - Automatic setup wizard for configuring SSH and connection parameters

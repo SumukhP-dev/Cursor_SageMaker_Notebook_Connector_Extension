@@ -1,5 +1,5 @@
 /**
- * Main entry point for the SageMaker Remote Connection extension
+ * Main entry point for the Cursor SageMaker Notebook Connector extension
  */
 import * as vscode from "vscode";
 import { ConnectionManager } from "./services/ConnectionManager";
@@ -13,8 +13,48 @@ import { QuickStartService } from "./services/QuickStartService";
 import { CleanupService } from "./services/CleanupService";
 import { MonitorService } from "./services/MonitorService";
 
+/**
+ * Check if the old deprecated extension is installed and notify the user
+ */
+async function checkForOldExtension(context: vscode.ExtensionContext): Promise<void> {
+  const oldExtensionId = "SumukhP-dev.sagemaker-remote-connection";
+  const migrationNotificationKey = "sagemaker-connector.migration-notification-shown";
+  
+  // Check if we've already shown this notification
+  const hasShownNotification = context.globalState.get<boolean>(migrationNotificationKey, false);
+  if (hasShownNotification) {
+    return;
+  }
+
+  try {
+    const oldExtension = vscode.extensions.getExtension(oldExtensionId);
+    if (oldExtension) {
+      const action = await vscode.window.showWarningMessage(
+        `The old "SageMaker Remote Connection" extension is installed. ` +
+        `Please uninstall it and use "Cursor SageMaker Notebook Connector" instead for the latest features.`,
+        "Open Extensions",
+        "Don't Show Again"
+      );
+
+      if (action === "Open Extensions") {
+        await vscode.commands.executeCommand("workbench.view.extensions");
+        // Search for the old extension
+        await vscode.commands.executeCommand("workbench.extensions.search", oldExtensionId);
+      } else if (action === "Don't Show Again") {
+        await context.globalState.update(migrationNotificationKey, true);
+      }
+    }
+  } catch (error) {
+    // Silently fail if we can't check for the extension
+    console.log("Could not check for old extension:", error);
+  }
+}
+
 export function activate(context: vscode.ExtensionContext) {
-  console.log("SageMaker Remote Connection extension is now active!");
+  console.log("Cursor SageMaker Notebook Connector extension is now active!");
+
+  // Check for old extension and notify user if needed
+  checkForOldExtension(context);
 
   // Register commands
   const connectCommand = vscode.commands.registerCommand(

@@ -1,8 +1,8 @@
 {
-  "name": "sagemaker-remote-connection",
-  "displayName": "SageMaker Remote Connection",
-  "description": "Connect Cursor/VS Code to AWS SageMaker Studio JupyterLab notebooks via Remote-SSH. One-click connection to SageMaker instances with automatic setup.",
-  "version": "1.0.1",
+  "name": "cursor-sagemaker-notebook-connector",
+  "displayName": "Cursor SageMaker Notebook Connector",
+  "description": "Connect Cursor to AWS SageMaker Studio JupyterLab notebooks via Remote-SSH. One-click connection to SageMaker notebook instances with automatic setup. Perfect for data scientists and ML engineers using Cursor with SageMaker.",
+  "version": "1.2.1",
   "publisher": "SumukhP-dev",
   "repository": {
     "type": "git",
@@ -124,7 +124,7 @@
       }
     ],
     "configuration": {
-      "title": "SageMaker Remote Connection",
+      "title": "Cursor SageMaker Notebook Connector",
       "properties": {
         "sagemakerRemote.spaceArn": {
           "type": "string",

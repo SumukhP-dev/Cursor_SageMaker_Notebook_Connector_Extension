@@ -404,12 +404,12 @@ if defined FOLDER_URI (
     REM Cursor doesn't support remote URIs via command line like VS Code does
     REM The URI format is: vscode-remote://ssh-remote+user@host/path
     REM Instead of trying to open it (which fails), we just return success
-    REM The connection will be handled by the SageMaker Remote Connection extension
+    REM The connection will be handled by the Cursor SageMaker Notebook Connector extension
     REM via Remote-SSH commands instead
     REM 
     REM Extract hostname from URI for logging (optional)
     REM Format: vscode-remote://ssh-remote+user@hostname/path
-    echo SageMaker Remote Connection: URI received, connection will be handled by extension
+    echo Cursor SageMaker Notebook Connector: URI received, connection will be handled by extension
     exit /b 0
 ) else (
     REM For non-URI commands, pass through to Cursor normally

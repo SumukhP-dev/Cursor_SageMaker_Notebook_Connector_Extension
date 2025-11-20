@@ -1,4 +1,4 @@
-# Contributing to SageMaker Remote Connection Extension
+# Contributing to Cursor SageMaker Notebook Connector Extension
 
 Thank you for your interest in contributing!
 
